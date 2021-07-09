@@ -308,10 +308,10 @@ export function initDefaultSpotlight(scene, initialPosition) {
 /*
  * Sphere to represent light position
  */
-export function createLightSphere(scene, radius, widthSegments, heightSegments, position)
+export function createLightSphere(scene, radius, widthSegments, heightSegments, position, colorObject)
 {
   var geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments, 0, Math.PI * 2, 0, Math.PI);
-  var material = new THREE.MeshBasicMaterial({color:"rgb(255,255,50)"});
+  var material = new THREE.MeshBasicMaterial({color:colorObject});
   var object = new THREE.Mesh(geometry, material);
     object.visible = true;
     object.position.copy(position);
